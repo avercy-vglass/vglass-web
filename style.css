@@ -105,7 +105,7 @@ form button:hover {
 footer {
   background-color: var(--color-primary);
   color: white;
-  padding: 20px;
+  padding: 0;
   text-align: center;
 }
 
@@ -129,6 +129,15 @@ h2 {
 }
 
 @media (max-width: 768px) {
+
+  .container-main {
+    padding: 0 16px;
+  }
+
+  .carousel {
+    gap: 8px;
+  }
+
   .product-list {
     flex-direction: column;
   }
@@ -144,7 +153,7 @@ h2 {
   }
 
   .section-block {
-    padding: 24px 0;
+    padding: 24px 16px;
   }
 
   h1 {
@@ -169,7 +178,7 @@ h2 {
 
 .compare-images img {
   flex: 1;
-  max-width: 50%;
+  max-width: 49%;
 }
 
 .carousel {
@@ -186,7 +195,7 @@ h2 {
 
 .carousel-slide img {
   flex: 1;
-  max-width: 49%;
+  max-width: 47%;
   height: auto;
 }
 
@@ -220,4 +229,14 @@ h2 {
   margin: 4px 0;
   font-size: var(--font-size-sm);
   color: #888;
+}
+
+.notice {
+  font-size: 14px;
+  color: var(--color-accent);
+  background-color: #f0f0ff;
+  padding: 10px 16px;
+  border-left: 3px solid var(--color-accent);
+  border-radius: 0 4px 4px 0;
+  margin-top: 12px;
 }
