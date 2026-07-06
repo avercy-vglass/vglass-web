@@ -58,3 +58,34 @@ nextBtn.addEventListener("click", function() {
   current = (current + 1) % slides.length;
   showSlide(current);
 });
+
+const form = document.querySelector("form");
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const topic = document.getElementById("topic").value;
+  const message = document.getElementById("message").value;
+
+  fetch("https://annuity-manila-triangle.ngrok-free.dev/webhook/3b9d64a3-b6f9-457a-80b8-67e459d4e298", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "ngrok-skip-browser-warning": "true"
+    },
+    body: JSON.stringify({
+      姓名: name,
+      電話: phone,
+      詢問主題: topic,
+      說明: message
+    })
+  })
+  .then(function(response) {
+    alert("詢價表單已送出，我們會盡快與您聯繫！");
+  })
+  .catch(function(error) {
+    alert("送出失敗，請稍後再試。");
+  });
+});
