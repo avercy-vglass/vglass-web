@@ -173,7 +173,7 @@ h2 {
 
 .compare-images {
   display: flex;
-  gap: 16px;
+  gap: 8px;
 }
 
 .compare-images img {
@@ -190,12 +190,12 @@ h2 {
 .carousel-slide {
   display: flex;
   flex: 1;
-  gap: 16px;
+  gap: 12px;
 }
 
 .carousel-slide img {
   flex: 1;
-  max-width: 47%;
+  max-width: 48%;
   height: auto;
 }
 
