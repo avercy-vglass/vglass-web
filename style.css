@@ -184,19 +184,6 @@ h2 {
 .carousel {
   display: flex;
   align-items: center;
-  gap: 8px;
-}
-
-.carousel-slide {
-  display: flex;
-  flex: 1;
-  gap: 12px;
-}
-
-.carousel-slide img {
-  flex: 1;
-  max-width: 48%;
-  height: auto;
 }
 
 .carousel-btn {
@@ -208,6 +195,23 @@ h2 {
   cursor: pointer;
   align-self: stretch;
   border-radius: 4px;
+  flex-shrink: 0;
+  width: 44px;
+}
+
+.carousel-slide {
+  display: flex;
+  flex: 1;
+  gap: 8px;
+  padding: 0 8px;
+}
+
+.carousel-slide img {
+  flex: 1;
+  width: 0;
+  min-width: 0;
+  height: auto;
+  object-fit: cover;
 }
 
 .carousel-btn:hover {
